@@ -8,22 +8,19 @@
 import UIKit
 
 class ViewControllerHasil: UIViewController {
-
+    
+    // TODO: Explore Nil-coalescing
+    var nama: String?
+    var hasil: String?
+    
+    @IBOutlet weak var namaLabel: UILabel!
+    @IBOutlet weak var hasilKarakter: UILabel!
+    @IBOutlet weak var deskripsiKarakter: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // kasih value nama yang nil
+        hasilKarakter.text = hasil
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
